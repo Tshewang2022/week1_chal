@@ -1,18 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <div>
-        <button class="count">count</button>
+      <!-- will break down the concepts into simple steps
+        1.will have counter app heading
+        2. will have increment and decrement button
+        3. in the middle will have the number 0
+        4. then at last will have the reset button -->
+      <p class="counter-app">Counter App</p>
+      <div class="background-color">
+        <div class="grid">
+          <button id="decrements">-</button>
+          <p class="counters">0</p>
+          <button id="increments">+</button>
+        </div>
+
+        <button id="resetBtns">reset</button>
+      </div>
+      <!-- one of the most important concept, while editing the html file, we have to used the DOM concept -->
     </div>
     <script>
-        function count(){
-            onclick(count)
-        }
+      //will target the hmtl element using the DOM concepts
+      const counter = document.querySelector(".counters");
+      const resetBtn = document.querySelector("#resetBtns");
+      const increment = document.querySelector("#increments");
+      const decrement = document.querySelector("#decrements");
+
+      //to each of this element we have to add the evenlistener
+      let value = 0;
+
+      increment.addEventListener("click", increments);
+      function increments() {
+        value += 1;
+        counter.textContent = value;
+      }
+
+      decrement.addEventListener("click", decrements);
+
+      function decrements() {
+        value -= 1;
+        counter.textContent = value;
+      }
+
+      resetBtn.addEventListener("click", resetBtns);
+
+      function resetBtns() {
+        value = 0;
+        counter.textContent = value;
+      }
     </script>
-</body>
+  </body>
 </html>

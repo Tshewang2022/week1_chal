@@ -1,0 +1,34 @@
+.background-color {
+  align-items: center;
+  height: 130px;
+  width: 200px;
+  background-color: gray;
+}
+.grid {
+  display: flex;
+}
+
+#increments {
+  height: 30px;
+  width: 60px;
+  margin: 20px;
+}
+
+#decrements {
+  height: 30px;
+  width: 60px;
+  margin: 20px;
+}
+
+.counters {
+  margin: 20px;
+}
+
+#resetBtns {
+  height: 30px;
+  width: 60px;
+  margin-left: 70px;
+}
+.counter-app {
+  margin-left: 50px;
+}
